@@ -18,6 +18,8 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
         password: "password123",
       } as User);
 
+      localStorage.setItem("userId", "1");
+
       router.push("/dashboard");
     } else {
       throw new Error("Invalid credentials");
@@ -25,7 +27,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const logout = () => {
-    console.log("logout here");
+    localStorage.removeItem("userId");
     setUser(null);
     router.push("/auth/login");
   };

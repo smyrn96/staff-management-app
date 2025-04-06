@@ -1,23 +1,20 @@
 "use client";
 import { useAuth } from "@/context/context";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const { user } = useAuth();
-  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
-    if (!user) {
-      router.push("/auth/login");
+    const userId = window.localStorage.getItem("userId");
+
+    if (!user && userId !== "1") {
+      router.replace("/auth/login");
+      router.refresh();
     }
   }, [user, router]);
 
-  if (!isClient) {
-    return null;
-  }
-
-  return children;
+  return <>{children}</>;
 }

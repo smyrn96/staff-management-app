@@ -1,18 +1,22 @@
 "use client";
-import { useAuth } from "@/context/context";
+import Header from "@/components/Header/header";
 import styles from "./page.module.css";
+import Card from "@/components/Card/card";
+import business from "../../components/Card/assets/business.jpg";
+import staff from "../../components/Card/assets/staff.jpg";
 
 export default function Dashboard() {
-  const { logout } = useAuth();
+  const titleHeader = "Welcome to the admin panel!";
   return (
     <>
-      <div className="header flex flex-row justify-between items-center m-5">
-        <h1 className={styles.headerTitle}>Welcome to the admin panel</h1>
-        <div>
-          <button className={styles.logoutButton} onClick={() => logout()}>
-            Logout
-          </button>
-        </div>
+      <Header title={titleHeader} />
+      <div className={styles.dashboardContainer}>
+        <Card
+          title="Business"
+          redirectLink="/dashboard/business"
+          image={business}
+        />
+        <Card title="Staff" redirectLink="/dashboard/staff" image={staff} />
       </div>
     </>
   );

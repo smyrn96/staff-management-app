@@ -1,0 +1,20 @@
+.headerWrapper {
+  background-color: #f0efeb;
+
+  .headerTitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .logoutButton {
+    padding: 0.5rem;
+    min-width: 100px;
+    background-color: #9a8c98;
+    color: white;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

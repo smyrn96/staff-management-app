@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@example.com",
+      "password": "password123",
+      "role": "admin"
+    }
+  ],
+  "businesses": [
+    {
+      "id": 1,
+      "name": "The Rusty Spoon",
+      "location": "123 Main St, New York",
+      "type": "restaurant"
+    },
+    {
+      "id": 2,
+      "name": "Midnight Lounge",
+      "location": "456 Elm St, Los Angeles",
+      "type": "bar"
+    },
+    {
+      "id": 3,
+      "name": "Grand Hotel",
+      "location": "789 Oak St, Chicago",
+      "type": "hotel"
+    },
+    {
+      "id": 4,
+      "name": "Quick Bites",
+      "location": "321 Pine St, Miami",
+      "type": "cafe"
+    },
+    {
+      "id": 5,
+      "name": "Pulse Nightclub",
+      "location": "654 Club Ave, Las Vegas",
+      "type": "club"
+    },
+    {
+      "id": 6,
+      "name": "Generic Business",
+      "location": "111 Test Blvd, Austin"
+    }
+  ],
+  "staff": [
+    {
+      "id": 1,
+      "email": "john.doe@example.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "position": "kitchen",
+      "businessId": 1,
+      "phoneNumber": "+1234567890"
+    },
+    {
+      "id": 2,
+      "email": "jane.smith@example.com",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "position": "service",
+      "businessId": 1
+    },
+    {
+      "id": 3,
+      "email": "mike.jones@example.com",
+      "firstName": "Mike",
+      "lastName": "Jones",
+      "position": "PR",
+      "businessId": 2,
+      "phoneNumber": "+1987654321"
+    }
+  ]
+}

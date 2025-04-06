@@ -1,0 +1,51 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #f0efeb;
+  text-align: center;
+  border-radius: 12px;
+  min-height: 320px;
+  min-width: 320px;
+
+  .loginTitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .formElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    .inputElement {
+      border-radius: 12px;
+      background-color: white;
+      padding: 0.5rem;
+      min-width: 200px;
+
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+
+    .buttonElement {
+      padding: 0.5rem;
+      min-width: 100px;
+      background-color: #9a8c98;
+      margin-top: 1rem;
+      color: white;
+      border-radius: 10px;
+
+      &:hover {
+        color: black;
+        background-color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

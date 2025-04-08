@@ -7,7 +7,7 @@
       "role": "admin"
     }
   ],
-  "businesses": [
+  "business": [
     {
       "id": 1,
       "name": "The Rusty Spoon",

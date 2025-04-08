@@ -5,6 +5,20 @@ export interface User {
   role: string;
 }
 
+export interface Business {
+  id: number;
+  name: string;
+  location: string;
+  type?: string;
+}
+
+export interface Staff {
+  id: number;
+  name: string;
+  location: string;
+  type?: string;
+}
+
 export interface UserCredentials {
   email: string;
   password: string;

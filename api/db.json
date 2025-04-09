@@ -58,30 +58,40 @@
   ],
   "staff": [
     {
-      "id": "1",
       "email": "john.doe@example.com",
       "firstName": "John",
       "lastName": "Doe",
-      "position": "kitchen",
+      "position": "garden",
       "businessId": "1",
-      "phoneNumber": "+1234567890"
+      "phoneNumber": "+1234567890",
+      "id": "1"
     },
     {
-      "id": "2",
       "email": "jane.smith@example.com",
       "firstName": "Jane",
       "lastName": "Smith",
       "position": "service",
-      "businessId": "1"
+      "businessId": "1",
+      "phoneNumber": "756983417229",
+      "id": "2"
     },
     {
       "id": "3",
       "email": "mike.jones@example.com",
       "firstName": "Mike",
       "lastName": "Jones",
-      "position": "PR",
+      "position": "reception",
       "businessId": "2",
       "phoneNumber": "+1987654321"
+    },
+    {
+      "id": "d408",
+      "email": "jack@tester.com",
+      "firstName": "Jack",
+      "lastName": "Daniels",
+      "position": "bar",
+      "businessId": "",
+      "phoneNumber": "+303030303030"
     }
   ]
 }

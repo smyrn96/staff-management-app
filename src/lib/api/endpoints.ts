@@ -18,6 +18,6 @@ export const api = {
     getStaffMember: (id: string) => apiClient.get<Staff>(`/staff/${id}`),
     addStaffeMember: (data: Staff) => apiClient.post("/staff", data),
     editStaffMember: (id: string, data: Staff) =>
-      apiClient.post(`/staff/${id}`, data),
+      apiClient.put(`/staff/${id}`, data),
   },
 };

@@ -52,9 +52,7 @@ export default function StaffDashboard() {
           data={staff}
           columns={columns}
           pageSize={7}
-          onRowClick={(business) =>
-            router.push(`/dashboard/staff/${business.id}`)
-          }
+          onRowClick={(staff) => router.push(`/dashboard/staff/${staff.id}`)}
           addButton={
             <button
               className="buttonElement"

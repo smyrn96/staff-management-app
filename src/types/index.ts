@@ -13,7 +13,7 @@ export interface Business {
 }
 
 export interface Staff {
-  id: string;
+  id?: string;
   firstName: string;
   lastName: string;
   position: string;

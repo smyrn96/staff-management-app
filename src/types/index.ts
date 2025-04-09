@@ -14,9 +14,11 @@ export interface Business {
 
 export interface Staff {
   id: string;
-  name: string;
-  location: string;
-  type?: string;
+  firstName: string;
+  lastName: string;
+  position: string;
+  businessId: string;
+  phoneNumber?: string;
 }
 
 export interface UserCredentials {

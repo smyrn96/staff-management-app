@@ -11,7 +11,7 @@ import {
   flexRender,
   RowSelectionState,
 } from "@tanstack/react-table";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 interface DataTableProps<TData> {
   data: TData[];
@@ -20,6 +20,7 @@ interface DataTableProps<TData> {
   searchableColumns?: string[];
   onRowClick?: (row: TData) => void;
   className?: string;
+  addButton: ReactNode;
 }
 
 export function DataTable<TData>({
@@ -28,6 +29,7 @@ export function DataTable<TData>({
   pageSize = 10,
   onRowClick,
   className = "",
+  addButton,
 }: DataTableProps<TData>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
@@ -55,8 +57,11 @@ export function DataTable<TData>({
     getPaginationRowModel: getPaginationRowModel(),
   });
 
+  console.log(data);
+
   return (
     <div className={`space-y-4 ${className}`}>
+      {addButton}
       <div className="rounded-md border overflow-auto">
         <table className="w-full min-w-[800px]">
           <thead className="bg-[#f0efeb]">

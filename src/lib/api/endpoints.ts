@@ -8,16 +8,16 @@ export const api = {
   },
   business: {
     getBusinesses: () => apiClient.get<Business[]>("/business"),
-    getBusiness: (id: number) => apiClient.get<Business>(`/business/${id}`),
+    getBusiness: (id: string) => apiClient.get<Business>(`/business/${id}`),
     addBussiness: (data: Business) => apiClient.post("/business", data),
-    editBusiness: (id: number, data: Business) =>
-      apiClient.post(`/business/${id}`, data),
+    editBusiness: (id: string, data: Business) =>
+      apiClient.put(`/business/${id}`, data),
   },
   staff: {
     getStaffMembers: () => apiClient.get<Staff[]>("/staff"),
-    getStaffMember: (id: number) => apiClient.get<Staff>(`/staff/${id}`),
+    getStaffMember: (id: string) => apiClient.get<Staff>(`/staff/${id}`),
     addStaffeMember: (data: Staff) => apiClient.post("/staff", data),
-    editStaffMember: (id: number, data: Staff) =>
+    editStaffMember: (id: string, data: Staff) =>
       apiClient.post(`/staff/${id}`, data),
   },
 };

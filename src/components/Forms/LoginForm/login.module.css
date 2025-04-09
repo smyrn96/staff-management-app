@@ -32,20 +32,5 @@
         font-size: 12px;
       }
     }
-
-    .buttonElement {
-      padding: 0.5rem;
-      min-width: 100px;
-      background-color: #9a8c98;
-      margin-top: 1rem;
-      color: white;
-      border-radius: 10px;
-
-      &:hover {
-        color: black;
-        background-color: white;
-        cursor: pointer;
-      }
-    }
   }
 }

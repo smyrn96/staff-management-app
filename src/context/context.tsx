@@ -13,7 +13,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   const login = async (email: string, password: string) => {
     if (email === "admin@example.com" && password === "password123") {
       setUser({
-        id: 1,
+        id: "1",
         email: "admin@example.com",
         password: "password123",
       } as User);

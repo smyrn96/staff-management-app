@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { capitalizeFirstLetter } from "@/lib/helpers/helpers";
 import { useRouter } from "next/navigation";
+import { IoIosAdd } from "react-icons/io";
 
 const columns: ColumnDef<Business>[] = [
   { accessorKey: "id", header: "ID" },
@@ -25,6 +26,7 @@ const columns: ColumnDef<Business>[] = [
 ];
 
 const titleHeader = "Business";
+const backLink = "/dashboard";
 
 export default function BusinessDashboard() {
   const [businesses, setBusinesses] = useState<Business[]>([]);
@@ -32,25 +34,33 @@ export default function BusinessDashboard() {
 
   const { data: businessData } = useQuery({
     queryKey: [],
-    queryFn: () => api.business.getBusinesses(),
+    refetchOnMount: "always",
+    queryFn: () => api.business.getBusinesses().then((res) => res.data),
   });
 
   useEffect(() => {
-    if (businessData?.data) setBusinesses(businessData.data);
+    if (businessData) setBusinesses(businessData);
   }, [businessData]);
-
-  console.log(businesses);
 
   return (
     <>
-      <Header title={titleHeader} />
+      <Header title={titleHeader} backLink={backLink} />
       <div className={styles.businessContainer}>
         <DataTable<Business>
           data={businesses}
           columns={columns}
-          pageSize={5}
+          pageSize={7}
           onRowClick={(business) =>
             router.push(`/dashboard/business/${business.id}`)
+          }
+          addButton={
+            <button
+              className="buttonElement"
+              onClick={() => router.push("/dashboard/business/new")}
+            >
+              <IoIosAdd />
+              Add business
+            </button>
           }
         />
       </div>

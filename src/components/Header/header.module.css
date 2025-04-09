@@ -1,20 +1,22 @@
 .headerWrapper {
   background-color: #f0efeb;
 
-  .headerTitle {
-    font-size: 24px;
-    font-weight: bold;
-  }
+  .arrowHeaderWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-  .logoutButton {
-    padding: 0.5rem;
-    min-width: 100px;
-    background-color: #9a8c98;
-    color: white;
-    border-radius: 10px;
+    .backArrow {
+      svg {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
 
-    &:hover {
-      cursor: pointer;
+    .headerTitle {
+      font-size: 24px;
+      font-weight: bold;
     }
   }
 }

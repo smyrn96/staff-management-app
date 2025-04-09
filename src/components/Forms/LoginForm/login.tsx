@@ -39,7 +39,7 @@ export default function Login({
             />
             <ErrorMessage name="password" component="div" />
             <button
-              className={styles.buttonElement}
+              className="buttonElement"
               type="submit"
               disabled={isSubmitting}
             >

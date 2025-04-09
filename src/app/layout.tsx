@@ -5,6 +5,7 @@ import AuthProvider from "@/context/context";
 import AuthGuard from "@/middleware/AuthGuard/authguard";
 import { QueryClientProvider } from "@tanstack/react-query";
 import queryClient from "@/middleware/ApiProvider/provider";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
           <AuthGuard>
             <QueryClientProvider client={queryClient}>
               {children}
+              <ToastContainer position="top-right" autoClose={3000} />
             </QueryClientProvider>
           </AuthGuard>
         </AuthProvider>

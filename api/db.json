@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "admin@example.com",
       "password": "password123",
       "role": "admin"
@@ -9,66 +9,78 @@
   ],
   "business": [
     {
-      "id": 1,
+      "id": "1",
       "name": "The Rusty Spoon",
-      "location": "123 Main St, New York",
+      "location": "126 Main St, New York",
       "type": "restaurant"
     },
     {
-      "id": 2,
       "name": "Midnight Lounge",
-      "location": "456 Elm St, Los Angeles",
-      "type": "bar"
+      "location": "461 Elm St, Los Angeles",
+      "type": "bar",
+      "id": "2"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Grand Hotel",
       "location": "789 Oak St, Chicago",
       "type": "hotel"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Quick Bites",
       "location": "321 Pine St, Miami",
       "type": "cafe"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Pulse Nightclub",
-      "location": "654 Club Ave, Las Vegas",
+      "location": "655 Club Ave, Las Vegas",
       "type": "club"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Generic Business",
       "location": "111 Test Blvd, Austin"
+    },
+    {
+      "id": "c45d",
+      "name": "Test business",
+      "location": "Athina, GRC",
+      "type": "bar"
+    },
+    {
+      "id": "995d",
+      "name": "Big apple",
+      "location": "124 Main St, New York",
+      "type": "restaurant"
     }
   ],
   "staff": [
     {
-      "id": 1,
+      "id": "1",
       "email": "john.doe@example.com",
       "firstName": "John",
       "lastName": "Doe",
       "position": "kitchen",
-      "businessId": 1,
+      "businessId": "1",
       "phoneNumber": "+1234567890"
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "jane.smith@example.com",
       "firstName": "Jane",
       "lastName": "Smith",
       "position": "service",
-      "businessId": 1
+      "businessId": "1"
     },
     {
-      "id": 3,
+      "id": "3",
       "email": "mike.jones@example.com",
       "firstName": "Mike",
       "lastName": "Jones",
       "position": "PR",
-      "businessId": 2,
+      "businessId": "2",
       "phoneNumber": "+1987654321"
     }
   ]

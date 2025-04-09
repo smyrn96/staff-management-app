@@ -1,19 +1,19 @@
 export interface User {
-  id: number;
+  id: string;
   email: string;
   password: string;
   role: string;
 }
 
 export interface Business {
-  id: number;
+  id?: string;
   name: string;
   location: string;
   type?: string;
 }
 
 export interface Staff {
-  id: number;
+  id: string;
   name: string;
   location: string;
   type?: string;
